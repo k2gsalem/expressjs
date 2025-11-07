@@ -1,0 +1,101 @@
+🏗️ 1. Project Initialization
+
+“Generate a standard Express.js REST API project using MVC structure with routes, controllers, and services.”
+
+“Add environment configuration using dotenv and separate config files for dev and production.”
+
+“Add ESLint and Prettier configuration for consistent code formatting.”
+
+“Setup nodemon for development hot reload and concurrently for multi-service dev run.”
+
+🔁 2. Routing & Controllers
+
+“Create Express.js routes for users and products using async/await and error handling middleware.”
+
+“Write Express.js controllers that handle CRUD operations using a service layer.”
+
+“Add centralized error handling middleware with proper HTTP status codes and JSON responses.”
+
+“Add input validation using express-validator for all API routes.”
+
+🧱 3. Architecture
+
+“Generate a scalable folder structure for an Express.js app (controllers, routes, services, models, middlewares, utils, config).”
+
+“Add a base controller and service template that other modules can extend.”
+
+“Implement global asyncHandler to simplify async route functions.”
+
+🔒 4. Authentication & Security
+
+“Add JWT authentication middleware for Express.js REST API.”
+
+“Implement role-based access control (admin, user).”
+
+“Add password hashing using bcrypt and secure login/signup flow.”
+
+“Add helmet, cors, and rate-limiter middleware for security.”
+
+🗄️ 5. Database Integration
+
+“Connect Express.js app to MongoDB using Mongoose ORM.”
+
+“Create Mongoose schemas and models for users and products.”
+
+“Implement CRUD operations in service layer using async/await.”
+
+“Add connection retry logic for MongoDB and handle database errors gracefully.”
+
+🧪 6. Testing
+
+“Generate unit and integration tests using Jest and Supertest for Express.js routes.”
+
+“Mock MongoDB and JWT for testing Express.js APIs.”
+
+🐳 7. Dockerization
+
+“Create a Dockerfile and docker-compose.yml for an Express.js app connected to MongoDB.”
+
+“Use multi-stage Docker build for smaller production image.”
+
+“Add .dockerignore to exclude node_modules, logs, and cache.”
+
+🚀 8. Deployment & Production
+
+“Generate a production Dockerfile for Express.js app with environment variables.”
+
+“Add logging using winston with daily rotate file.”
+
+“Setup pm2 process manager for running Express app in production.”
+
+“Add health-check endpoint for monitoring container health.”
+
+🧰 9. Utilities & Helpers
+
+“Create a reusable response helper for success and error messages.”
+
+“Add utility to generate random tokens and handle date/time formatting.”
+
+“Implement global logger for request and error tracking.”
+
+🧑‍💻 10. Developer Experience
+
+“Setup Swagger (OpenAPI 3.0) for API documentation.”
+
+“Add CORS configuration allowing specific origins and methods.”
+
+“Generate .env.example file with all required environment variables.”
+
+“Add GitHub Actions CI workflow for testing and linting before deployment.”
+
+🌐 11. Optional Enhancements
+
+“Add Redis caching for product list endpoint.”
+
+“Implement pagination and search for products API.”
+
+“Integrate S3 file upload support using multer-s3.”
+
+“Add GraphQL endpoint alongside REST routes.”
+
+“Add Socket.IO for real-time notifications.”
