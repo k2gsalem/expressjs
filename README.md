@@ -15,17 +15,28 @@ Modular REST and GraphQL API built with Express.js, Mongoose, and Socket.IO. The
 - MongoDB 7.x and Redis 7.x (local installs or Docker services)
 - Optional: Docker Desktop (for container workflows)
 
-## Local Setup
-1. **Install dependencies**
+## Local Installation & Setup
+1. **Clone & install**
    ```bash
+   git clone <repo-url> expressjs
+   cd expressjs
    npm install
    ```
 2. **Create your env file**
    ```bash
    cp .env.example .env
-   # edit the new file with your secrets
    ```
-3. **Start MongoDB & Redis** (locally or via `docker-compose` below).
+   - Set local-friendly values, e.g. `MONGO_URI=mongodb://127.0.0.1:27017/express_app`
+     and `REDIS_URL=redis://127.0.0.1:6379`.
+3. **Start MongoDB & Redis**
+   - Native services: start `mongod` and `redis-server` however you normally manage them.
+   - *Or* run ephemeral containers:
+     ```bash
+     docker run --name express-mongo -p 27017:27017 -d mongo:7
+     docker run --name express-redis -p 6379:6379 -d redis:7-alpine
+     ```
+4. **Run the API locally** – once databases are up, use the commands in the next section
+   (`npm run dev` for watch mode or `npm start` for a single process).
 
 ## Running the App
 - **Development (auto reload + live Swagger generation)**
