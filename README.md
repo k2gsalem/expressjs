@@ -39,20 +39,25 @@ Modular REST and GraphQL API built with Express.js, Mongoose, and Socket.IO. The
    (`npm run dev` for watch mode or `npm start` for a single process).
 
 ## Running the App
-- **Development (auto reload + live Swagger generation)**
-  ```bash
-  npm run dev
-  ```
-  Runs `nodemon src/server.js` and watches `src/docs/swagger.js` to regenerate `src/docs/swagger-output.json`.
+Once dependencies and environment variables are ready, choose one of these options (from the project root):
 
-- **Standard start**
-  ```bash
-  npm start
-  ```
+1. **Development mode** – best for local hacking (auto reload + live Swagger build):
+   ```bash
+   npm run dev
+   ```
+   This runs `nodemon src/server.js` and simultaneously watches `src/docs/swagger.js` to regenerate `src/docs/swagger-output.json`.
 
-- **Health checks**
-  - REST health: `GET /api/health`
-  - Infra health: `GET /health` (returns uptime payload)
+2. **Single-process start** – mimics a lightweight production server without clustering:
+   ```bash
+   npm start
+   ```
+   Useful when you want to run the compiled API exactly as it will behave in Docker/PM2 but without additional tooling.
+
+3. **Verify the service** – when the server is up:
+   - REST health check: `GET http://localhost:3000/api/health`
+   - Infra health check: `GET http://localhost:3000/health`
+   - Swagger docs: `http://localhost:3000/docs`
+   - GraphQL playground: `http://localhost:3000/graphql`
 
 ## Testing & Quality
 ```bash

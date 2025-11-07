@@ -30,6 +30,7 @@
     "concurrently": "^8.2.2",
     "cors": "^2.8.5",
     "dayjs": "^1.11.10",
+    "doctrine": "^3.0.0",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "express-rate-limit": "^6.10.0",
@@ -59,6 +60,7 @@
     "lint-staged": "^15.2.2",
     "nodemon": "^3.1.0",
     "prettier": "^3.2.5",
+    "spawn-command": "^0.0.2",
     "supertest": "^6.3.4"
   },
   "jest": {
